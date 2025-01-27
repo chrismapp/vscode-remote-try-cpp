@@ -1,0 +1,30 @@
+# Use google coding standard as a baseline
+BasedOnStyle: Google
+
+IndentWidth: 4
+BreakBeforeBraces: Allman
+
+IndentCaseLabels: true
+
+ColumnLimit: 0
+
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: false
+SpaceBeforeSquareBrackets: false
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: true
+SpacesInParentheses: true
+SpacesInSquareBrackets: false
+# Excessive vertical separation should be avoided.
+MaxEmptyLinesToKeep: 1
+
+# Align macros and structure members for readability
+AlignConsecutiveMacros: true
+
+# Do not sort include files
+SortIncludes: false
+
+# Do not modify lint comments
+CommentPragmas: '^(lint|NOLINT)'

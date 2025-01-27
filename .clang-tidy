@@ -1,0 +1,39 @@
+# Include all headers found
+HeaderFilterRegex: '.'
+
+Checks: >
+    -*,
+    readability-identifier-naming,
+    readability-braces-around-statements,
+    readability-isolate-declaration,
+    readability-function-size,
+    readability-simplify-boolean-expr,
+    readability-else-after-return,
+    readability-redundant-control-flow,
+    readability-non-const-parameter,
+    cppcoreguidelines-init-variables,
+    cppcoreguidelines-narrowing-conversions,
+    bugprone-macro-parentheses,
+    bugprone-misplaced-widening-cast,
+    readability-inconsistent-declaration-parameter-name,
+    readability-magic-numbers,
+    cppcoreguidelines-pro-type-union-access,
+    clang-analyzer-security.FloatLoopCounter
+
+CheckOptions:
+- { key: readability-braces-around-statements.ShortStatementLines, value: 0  }
+- { key: readability-identifier-naming.FunctionCase,        value: camelBack  }
+- { key: readability-identifier-naming.GlobalFunctionCase,   value: camelBack }
+- { key: readability-identifier-naming.GlobalFunctionPrefix, value: fileName_ }
+- { key: readability-identifier-naming.VariableCase,        value: camelBack }
+- { key: readability-identifier-naming.GlobalVariablePrefix, value: m_fileName_ }
+- { key: readability-identifier-naming.MacroDefinitionCase,  value: UPPER_CASE  }
+- { key: readability-identifier-naming.MacroDefinitionPrefix, value: MODULENAME_IF_H_ }
+- { key: readability-identifier-naming.TypedefCase,   value: camelBack }
+- { key: readability-identifier-naming.TypedefPrefix, value: tFileName_ }
+- { key: readability-identifier-naming.FilenameIgnoreSuffix, value: "_types,_defines,_variant" }
+- { key: cppcoreguidelines-narrowing-conversions.WarnOnIntegerNarrowingConversion, value: true }
+- { key: readability-magic-numbers.IgnoredIntegerValues, value: 1 }
+- { key: bugprone-misplaced-widening-cast.CheckImplicitCasts, value: 1 }
+- { key: readability-inconsistent-declaration-parameter-name.Strict, value: true }
+- { key: readability-function-size.NestingThreshold, value: 5}
